@@ -20,6 +20,7 @@ class xrootd::params {
     $authfile_template = "xrootd/authfile_generic.erb"
     $configdir = "/etc/xrootd"
     $logdir = "/var/log/xrootd"
+    $spooldir = "/var/spool/xrootd"
 
     # sets 'daemon.trace all' for ofs,xrd,cms,oss
     $xrd_debug = false
