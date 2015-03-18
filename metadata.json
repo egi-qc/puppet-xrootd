@@ -1,0 +1,23 @@
+{
+  "author": "puppet",
+  "dependencies": [
+    {
+      "name": "CERNOps/fetchcrl",
+      "version_requirement": "\u003e\u003d 0.1.0"
+    },
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "\u003e\u003d 2.0.0"
+    }
+  ],
+  "description": "This module installs and configure a xrootd server",
+  "license": "Apache License, Version 2.0",
+  "name": "lcgdm-xrootd",
+  "operatingsystem_support": [],
+  "project_page": "https://svnweb.cern.ch/trac/lcgdm",
+  "requirements": [],
+  "source": "https://github.com/cern-it-sdc-id/puppet-xrootd",
+  "summary": "This module installs and configure a xrootd server",
+  "tags": [],
+  "version": "0.1.2"
+}
