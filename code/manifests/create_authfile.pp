@@ -7,8 +7,8 @@ define xrootd::create_authfile (
 
   file {$filename:
     ensure  => file,
-    owner   => $xrootd_user,
-    group   => $xrootd_group,
+    owner   => $::xrootd_user,
+    group   => $::xrootd_group,
     content => template($template)
   }
 
