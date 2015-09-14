@@ -3,10 +3,10 @@ class xrootd::params {
     $xrootd_user = "xrootd"
     $xrootd_group = "xrootd"
 
-    $xrootd_instances_options = { "default" => "-l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k 7" }
-    $cmsd_instances_options = undef #{ "default" => "-l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k 7" }
-    $purd_instances_options = undef #{ "default" => "-l /var/log/xrootd/purd.log -c /etc/xrootd/xrootd-clustered.cfg -k 7" }
-    $xfrd_instances_options = undef #{ "default" => "-l /var/log/xrootd/xfrd.log -c /etc/xrootd/xrootd-clustered.cfg -k 7" }
+    $xrootd_instances_options = { "default" => "-l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
+    $cmsd_instances_options = undef #{ "default" => "-l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
+    $purd_instances_options = undef #{ "default" => "-l /var/log/xrootd/purd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
+    $xfrd_instances_options = undef #{ "default" => "-l /var/log/xrootd/xfrd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
 
     $exports = undef
 
@@ -40,6 +40,7 @@ class xrootd::params {
     $xrootd_async = false
     $xrootd_chksum = undef
     $xrootd_monitor = undef
+    $xrootd_fslib = undef
 
     $sec_protocol = [ ] 
 
@@ -47,6 +48,7 @@ class xrootd::params {
     #$xrd_network = "nodnr"
     $xrd_network = undef
     $xrd_report = undef
+    $xrd_timeout = undef
     $xrd_maxredirectcount = 1
 
     $acc_authdb = undef
@@ -57,6 +59,11 @@ class xrootd::params {
     # ofs.osslib for exec xrootd/cmsd
     $xrd_ofsosslib = undef
     $cmsd_ofsosslib = undef
+    $cms_allow = undef
+    $cms_fxhold = '60s'
+    $cms_delay = undef
+    $cms_sched = undef
+    $cms_ping = undef
     $ofs_cmslib = undef
     $ofs_forward = undef
     $ofs_tpc = undef
@@ -65,5 +72,9 @@ class xrootd::params {
     $pss_setopt = undef
 
     $oss_localroot = undef
+    $oss_defaults = undef
+    $oss_usage = undef
+    $oss_namelib = undef
+    $osscachepath = undef
 
 }
