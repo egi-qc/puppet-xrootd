@@ -24,20 +24,6 @@ all.sitename <%= @all_sitename %>
 <% if @oss_localroot -%>
 oss.localroot <%= @oss_localroot %>
 <% end -%>
-<% if @oss_defaults -%>
-oss.defaults <%= @oss_defaults %>
-<% end -%>
-<% if @oss_namelib -%>
-oss.namelib <%= @oss_namelib %>
-<% end -%>
-<% if @oss_usage -%>
-oss.usage <%= @oss_usage %>
-<% end -%>
-
-<% if @xrootd_fslib -%>
-xrootd.fslib <%= @xrootd_fslib %>
-<% end -%>
-
 <% if @all_export -%>
 <% @all_export.sort.each do |export| -%>
 all.export <%= File.join(export,"") %>
@@ -47,109 +33,85 @@ all.export <%= File.join(export,"") %>
 xrd.network <%= @xrd_network %>
 <% end -%>
 
+<% if @oss_localroot -%>
+oss.localroot <%= @oss_localroot %>
+<% end -%>
+
 <% if @xrootd_chksum -%>
 xrootd.chksum <%= @xrootd_chksum %>
 <% end -%>
 <% if @xrootd_monitor -%>
 xrootd.monitor <%= @xrootd_monitor %>
 <% end -%>
-<% if @xrd_report -%>
-xrd.report <%= @xrd_report %>
-<% end -%>
-
 <% if @xrootd_async -%>
 xrootd.async <%= @xrootd_async %>
 <% end -%>
 
 if exec xrootd
-<% if @xrootd_seclib -%>
- xrootd.seclib <%= @xrootd_seclib %>
-<% end -%>
+xrootd.seclib <%= @xrootd_seclib %>
 <% if @sec_protocol -%>
 <% @sec_protocol.sort.each do |secprot| -%>
- sec.protocol <%= secprot %>
+sec.protocol <%= secprot %>
 <% end -%>
 <% end -%>
 <% if @xrootd_redirect -%>
- xrootd.redirect <%= @xrootd_redirect %>
+xrootd.redirect <%= @xrootd_redirect %>
 <% end -%>
 <% if @xrootd_export -%>
 <% @xrootd_export.sort.each do |export| -%>
- xrootd.export <%= export %>
+xrootd.export <%= File.join(export,"") %>
 <% end -%>
 <% end -%>
 <% if @xrd_port -%>
- xrd.port <%= @xrd_port %>
+xrd.port <%= @xrd_port %>
 <% end -%>
-<% if @xrd_timeout -%>
- xrd.timeout <%= @xrd_timeout %>
+<% if @xrd_report -%>
+xrd.report <%= @xrd_report %>
 <% end -%>
 <% if @ofs_cmslib -%>
- ofs.cmslib <%= @ofs_cmslib %>
+ofs.cmslib <%= @ofs_cmslib %>
 <% end -%>
 <% if @xrd_ofsosslib -%>
- ofs.osslib <%= @xrd_ofsosslib %>
+ofs.osslib <%= @xrd_ofsosslib %>
 <% end -%>
 <% if @ofs_authlib -%>
- ofs.authlib <%= @ofs_authlib %>
+ofs.authlib <%= @ofs_authlib %>
 <% end -%>
 <% if @ofs_authorize -%>
- ofs.authorize
+ofs.authorize
 <% end -%>
 <% if @ofs_forward -%>
- ofs.forward <%= @ofs_forward %>
+ofs.forward <%= @ofs_forward %>
 <% end -%>
 <% if @ofs_persist -%>
- ofs.persist <%= @ofs_persist %>
+ofs.persist <%= @ofs_persist %>
 <% end -%>
 <% if @ofs_tpc -%>
- ofs.tpc <%= @ofs_tpc %>
+ofs.tpc <%= @ofs_tpc %>
 <% end -%>
 <% if @acc_authdb -%>
- acc.authdb <%= @acc_authdb %>
+acc.authdb <%= @acc_authdb %>
 <% end -%>
- all.role <%= @xrd_allrole %>
-<% if @xrd_sched -%>
- xrd.sched <%= @xrd_sched %>
-<% end -%> 
+all.role <%= @xrd_allrole %>
 fi
 
 if exec cmsd
 <% if @cmsd_ofsosslib -%>
- ofs.osslib <%= @cmsd_ofsosslib %>
+ofs.osslib <%= @cmsd_ofsosslib %>
 <% end -%>
 <% if @pss_origin -%>
- pss.origin <%= @pss_origin %>
+pss.origin <%= @pss_origin %>
 <% end -%>
 <% if @pss_setopt -%>
 <% @pss_setopt.sort.each do |option| -%>
- pss.setopt <%= option %>
+pss.setopt <%= option %>
 <% end -%>
 <% end -%>
- all.role <%= @cmsd_allrole %>
-<% if @cms_allow -%>
-<% @cms_allow.sort.each do |allow| -%>
- cms.allow <%= allow %>
-<% end -%>
-<% end -%>
-<% if @cms_delay -%>
- cms.delay <%= @cms_delay %>
-<% end -%> 
-<% if @cms_sched -%>
- cms.sched <%= @cms_sched %>
-<% end -%> 
-<% if @cms_fxhold -%>
- cms.fxhold <%= @cms_fxhold %>
-<% end -%>
-<% if @cms_ping -%>
- cms.ping <%= @cms_ping %>
-<% end -%>
+all.role <%= @cmsd_allrole %>
 fi
 
 <% if @all_manager -%>
-<% @all_manager.sort.each do |manager| -%>
-all.manager <%= manager %>
-<% end -%>
+all.manager <%= @all_manager %>
 <% end -%>
 
 <% if @specifics -%>

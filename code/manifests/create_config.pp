@@ -24,14 +24,9 @@ define xrootd::create_config (
   $xrootd_export = $xrootd::config::xrootd_export,
   $xrootd_seclib = $xrootd::config::xrootd_seclib,
   $xrootd_async = $xrootd::config::xrootd_async,
-  $xrootd_monitor = $xrootd::config::xrootd_monitor,
-  $xrootd_chksum = $xrootd::config::xrootd_chksum,
-  $xrootd_fslib = $xrootd::config::xrootd_fslib,
 
   $xrd_port = $xrootd::config::xrd_port,
   $xrd_network = $xrootd::config::xrd_network,
-  $xrd_report = $xrootd::config::xrd_report,
-  $xrd_timeout = $xrootd::config::xrd_timeout,
 
   $acc_authdb = $xrootd::config::acc_authdb,
 
@@ -41,20 +36,10 @@ define xrootd::create_config (
   # ofs.osslib for exec xrootd/cmsd
   $xrd_ofsosslib = $xrootd::config::xrd_ofsosslib,
   $cmsd_ofsosslib = $xrootd::config::cmsd_ofsosslib,
-  $cms_allow = $xrootd::config::cms_allow,
-  $cms_delay = $xrootd::config::cms_delay,
-  $cms_fxhold = $xrootd::config::cms_fxhold,
-  $cms_sched = $xrootd::config::cms_sched,
-  $cms_ping = $xrootd::config::cms_ping,
-  $xrd_sched = $xrootd::config::xrd_sched,
   $ofs_cmslib = $xrootd::config::ofs_cmslib,
   $ofs_forward = $xrootd::config::ofs_forward,
   $ofs_tpc = $xrootd::config::ofs_tpc,
   $oss_localroot = $xrootd::config::oss_localroot,
-  $oss_defaults = $xrootd::config::oss_defaults,
-  $osscachepath = $xrootd::config::osscachepath,
-  $oss_usage = $xrootd::config::oss_usage,
-  $oss_namelib = $xrootd::config::oss_namelib,
 
   $sec_protocol = $xrootd::config::sec_protocol,
 

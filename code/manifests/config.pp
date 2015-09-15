@@ -24,7 +24,7 @@ class xrootd::config (
   }
 
   file {$configdir:
-    ensure => directory,
+    ensure	=> directory,
     owner  => $xrootd_user,
     group  => $xrootd_group
   }
