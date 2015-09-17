@@ -22,9 +22,10 @@ XROOTD_GROUP=<%= @xrootd_group %>
 #            without whitespaces is valid
 #-------------------------------------------------------------------------------
 <% if @xrootd_instances_options -%>
-<% @xrootd_instances_options.sort.map do |instance, options| -%>
+<% @xrootd_instances_options.map do |option_type| -%>
+<% option_type.sort.map do |instance, options| -%>
 XROOTD_<%= instance.upcase %>_OPTIONS="<%= options %>"
-<% end -%><% end -%>
+<% end -%><% end -%><% end -%>
 
 <% if @cmsd_instances_options -%>
 <% @cmsd_instances_options.sort.map do |instance, options| -%>
@@ -48,9 +49,10 @@ XFRD_<%= instance.upcase %>_OPTIONS="<%= options %>"
 #-------------------------------------------------------------------------------
 <% if @xrootd_instances_options -%>
 XROOTD_INSTANCES="<% -%>
-<% @xrootd_instances_options.sort.map do |instance, options| -%>
+<% @xrootd_instances_options.map do |option_type| -%>
+<% option_type.sort.map do |instance, options| -%>
   <%= instance -%>
-<% end -%>"<% end %>
+<% end -%><% end -%>"<% end %>
 
 <% if @cmsd_instances_options -%>
 CMSD_INSTANCES="<% -%>
