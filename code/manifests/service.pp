@@ -11,7 +11,28 @@ class xrootd::service (
   } else {
     $files = File[$sysconfigfile, $configfile]
   }
+#centOS7 changes
+ if $::operatingsystemmajrelease and $::operatingsystemmajrelease >= 7 { 
 
+   service {'xrootd@redir.service':
+     ensure    => running,
+     enable    => true,
+     provider  => systemd,
+   }
+   service {'xrootd@disk.service':
+     ensure    => running,
+     enable    => true,
+     provider  => systemd,
+  }
+  service {'cmsd.service':
+     ensure    => running,
+     enable    => true,
+     provider  => systemd,
+  }
+
+ }
+  
+ else {
   # Start the services
   service {'xrootd':
     ensure    => running,
@@ -24,4 +45,5 @@ class xrootd::service (
     enable    => true,
     #subscribe => [$files],
    }
+ }
 }
