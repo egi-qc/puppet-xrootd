@@ -3,10 +3,10 @@ class xrootd::params {
     $xrootd_user = "xrootd"
     $xrootd_group = "xrootd"
 
-    $xrootd_instances_options = { "default" => "-l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
-    $cmsd_instances_options = undef #{ "default" => "-l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
-    $purd_instances_options = undef #{ "default" => "-l /var/log/xrootd/purd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
-    $xfrd_instances_options = undef #{ "default" => "-l /var/log/xrootd/xfrd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" }
+    $xrootd_instances_options = [ {"default" => "-l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo"} ] #Unlike the other *_instances_options, this xrootd_instances_options is an array of hashes.
+    $cmsd_instances_options = undef # { "default" => "-l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" } #This is a hash
+    $purd_instances_options = undef # { "default" => "-l /var/log/xrootd/purd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" } #This is a hash
+    $xfrd_instances_options = undef # { "default" => "-l /var/log/xrootd/xfrd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" } #This is a hash
 
     $exports = undef
 
