@@ -144,6 +144,9 @@ if exec cmsd
 <% if @cms_ping -%>
  cms.ping <%= @cms_ping %>
 <% end -%>
+<% if @cms_cidtag and @all_sitename -%>
+ cms.cidtag <%= @all_sitename %>
+<% end -%>
 fi
 
 <% if @all_manager -%>

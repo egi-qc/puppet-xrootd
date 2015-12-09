@@ -64,6 +64,7 @@ class xrootd::params {
     $cms_delay = undef
     $cms_sched = undef
     $cms_ping = undef
+    $cms_cidtag = undef
     $ofs_cmslib = undef
     $ofs_forward = undef
     $ofs_tpc = undef
