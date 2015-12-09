@@ -107,7 +107,27 @@ pss.origin <%= @pss_origin %>
 pss.setopt <%= option %>
 <% end -%>
 <% end -%>
-all.role <%= @cmsd_allrole %>
+ all.role <%= @cmsd_allrole %>
+<% if @cms_allow -%>
+<% @cms_allow.sort.each do |allow| -%>
+ cms.allow <%= allow %>
+<% end -%>
+<% end -%>
+<% if @cms_delay -%>
+ cms.delay <%= @cms_delay %>
+<% end -%> 
+<% if @cms_sched -%>
+ cms.sched <%= @cms_sched %>
+<% end -%> 
+<% if @cms_fxhold -%>
+ cms.fxhold <%= @cms_fxhold %>
+<% end -%>
+<% if @cms_ping -%>
+ cms.ping <%= @cms_ping %>
+<% end -%>
+<% if @cms_cidtag and @all_sitename -%>
+ cms.cidtag <%= @all_sitename %>
+<% end -%>
 fi
 
 <% if @all_manager -%>

@@ -1,2 +1,8 @@
+2015-09-15  Gerard Bernabeu <gerard1@fnal.gov>
+        * Added some more config variables
+	* instances_options now have -k fifo like default xrootd RPM
+	* xrootd_instances_options array fixed and idented template content
+	* all.manager converted in an array
+	* Removed duplicated oss.localroot entry in xrootd.xfg.erb
 2015-03-23  Andrea Manzi  <andrea.manzi@cern.ch>
 	* added LD_LIBRARY_PATH conf for hdfs plugin
