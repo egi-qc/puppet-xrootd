@@ -148,10 +148,10 @@ if exec cmsd
 <% if @cms_ping -%>
  cms.ping <%= @cms_ping %>
 <% end -%>
+fi
 <% if @cms_cidtag -%>
  cms.cidtag <%= @cms_cidtag %>
 <% end -%>
-fi
 
 <% if @all_manager -%>
 <% @all_manager.sort.each do |manager| -%>
