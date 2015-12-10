@@ -69,7 +69,7 @@ class xrootd::params {
 
     $pss_origin = undef
     $pss_setopt = undef
-
+    $oss_statlib = undef
     $oss_localroot = undef
 
 }

@@ -36,10 +36,22 @@ define xrootd::create_config (
   # ofs.osslib for exec xrootd/cmsd
   $xrd_ofsosslib = $xrootd::config::xrd_ofsosslib,
   $cmsd_ofsosslib = $xrootd::config::cmsd_ofsosslib,
+  $cms_allow = $xrootd::config::cms_allow,
+  $cms_delay = $xrootd::config::cms_delay,
+  $cms_fxhold = $xrootd::config::cms_fxhold,
+  $cms_sched = $xrootd::config::cms_sched,
+  $cms_ping = $xrootd::config::cms_ping,
+  $cms_cidtag = $xrootd::config::cms_cidtag,
+  $xrd_sched = $xrootd::config::xrd_sched,
   $ofs_cmslib = $xrootd::config::ofs_cmslib,
   $ofs_forward = $xrootd::config::ofs_forward,
   $ofs_tpc = $xrootd::config::ofs_tpc,
   $oss_localroot = $xrootd::config::oss_localroot,
+  $oss_defaults = $xrootd::config::oss_defaults,
+  $osscachepath = $xrootd::config::osscachepath,
+  $oss_usage = $xrootd::config::oss_usage,
+  $oss_namelib = $xrootd::config::oss_namelib,
+  $oss_statlib = $xrootd::config::oss_statlib,
 
   $sec_protocol = $xrootd::config::sec_protocol,
 

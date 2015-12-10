@@ -1,3 +1,6 @@
+2015-12-10 Andrea Manzi <andrea.manzi@cern.ch>
+        * added oss.statlib var
+        * added cms.cidtag var
 2015-09-15  Gerard Bernabeu <gerard1@fnal.gov>
         * Added some more config variables
 	* instances_options now have -k fifo like default xrootd RPM
