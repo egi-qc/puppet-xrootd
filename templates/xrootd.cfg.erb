@@ -115,16 +115,20 @@ if exec xrootd
 fi
 
 if exec cmsd
-<% if @cmsd_ofsosslib -%>
+<% if @oss_statlib -%>
+ oss.statlib <%= @oss_statlib %>
+<% else -%>
+ <% if @cmsd_ofsosslib -%>
  ofs.osslib <%= @cmsd_ofsosslib %>
-<% end -%>
-<% if @pss_origin -%>
+ <% end -%>
+ <% if @pss_origin -%>
  pss.origin <%= @pss_origin %>
-<% end -%>
-<% if @pss_setopt -%>
-<% @pss_setopt.sort.each do |option| -%>
+ <% end -%>
+ <% if @pss_setopt -%>
+ <% @pss_setopt.sort.each do |option| -%>
  pss.setopt <%= option %>
-<% end -%>
+ <% end -%>
+ <% end -%>
 <% end -%>
  all.role <%= @cmsd_allrole %>
 <% if @cms_allow -%>
@@ -144,8 +148,8 @@ if exec cmsd
 <% if @cms_ping -%>
  cms.ping <%= @cms_ping %>
 <% end -%>
-<% if @cms_cidtag and @all_sitename -%>
- cms.cidtag <%= @all_sitename %>
+<% if @cms_cidtag -%>
+ cms.cidtag <%= @cms_cidtag %>
 <% end -%>
 fi
 

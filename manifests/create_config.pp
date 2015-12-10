@@ -46,6 +46,7 @@ define xrootd::create_config (
   $cms_fxhold = $xrootd::config::cms_fxhold,
   $cms_sched = $xrootd::config::cms_sched,
   $cms_ping = $xrootd::config::cms_ping,
+  $cms_cidtag = $xrootd::config::cms_cidtag,
   $xrd_sched = $xrootd::config::xrd_sched,
   $ofs_cmslib = $xrootd::config::ofs_cmslib,
   $ofs_forward = $xrootd::config::ofs_forward,
@@ -55,6 +56,7 @@ define xrootd::create_config (
   $osscachepath = $xrootd::config::osscachepath,
   $oss_usage = $xrootd::config::oss_usage,
   $oss_namelib = $xrootd::config::oss_namelib,
+  $oss_statlib = $xrootd::config::oss_statlib,
 
   $sec_protocol = $xrootd::config::sec_protocol,
 
