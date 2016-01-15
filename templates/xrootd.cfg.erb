@@ -154,7 +154,7 @@ fi
 <% end -%>
 
 <% if @all_manager -%>
-<% @all_manager.sort.each do |manager| -%>
+<% Array(@all_manager).sort.each do |manager| -%>
 all.manager <%= manager %>
 <% end -%>
 <% end -%>
