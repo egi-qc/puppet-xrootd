@@ -22,7 +22,7 @@
 class xrootd (
 ) inherits xrootd::params {
 
-  Class[Xrootd::Install] -> Class[Xrootd::Config] -> Class[Xrootd::Service]
+  Class[xrootd::install] -> Class[xrootd::config] -> Class[xrootd::service]
 
   class{"xrootd::install":}
   class{"xrootd::config":}
