@@ -4,7 +4,7 @@ class xrootd::service (
     $authfile = undef
 ) inherits xrootd::params {
 
-  Class[Xrootd::Config] -> Class[Xrootd::Service]
+  Class[xrootd::config] -> Class[xrootd::service]
 
   if $authfile != undef {
     $files = File[$sysconfigfile, $configfile, $authfile]
