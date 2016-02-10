@@ -1,0 +1,19 @@
+{
+  "templates/xrootd.cfg.erb": "8e8897777440aa803a2f7ae9d0edfd3c",
+  "README.md": "12a824081430c14ed460a6fc8fa5f7d7",
+  "manifests/config.pp": "e4d278d2607cb65033867223a55559d8",
+  "CHANGELOG": "5f19b5149f835dd188bdabc4588bea20",
+  "manifests/create_sysconfig.pp": "3f52104a93406292ae881e39724e2cc1",
+  "manifests/params.pp": "684da8617bd64172b693321bc3e043a1",
+  "templates/authfile_generic.erb": "9878dbf34a4606d5ad613511a527d956",
+  "Rakefile": "20b80e526e351a74df2001f504e756d2",
+  "Gemfile": "ab88e8a47f265429d709c2ed60fdd305",
+  "manifests/create_config.pp": "9b7ab0016081e64879cc5205dea82f40",
+  "manifests/install.pp": "4790ade063c96c1e55aabc2f78b07dba",
+  "manifests/create_authfile.pp": "cd454b2579e302dc29ddd1d01637e915",
+  "metadata.json": "2378585cd746d1760f0f672cbf9abb16",
+  "tests/init.pp": "e0116d21621323efbffb16dfb2880428",
+  "manifests/service.pp": "65fb8c05f3c3e54d7f3da7ca159696a5",
+  "templates/sysconfig.erb": "3e141d3582e24db49d06c1818a0ecc5a",
+  "manifests/init.pp": "8b0639f33e5b97168f8d2f0633d503c0"
+}
