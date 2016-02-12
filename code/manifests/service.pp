@@ -14,12 +14,12 @@ class xrootd::service (
 #centOS7 changes
  if $::operatingsystemmajrelease and $::operatingsystemmajrelease >= 7 { 
 
-   service {'xrootd@redir.service':
+   service {'xrootd@dpmredir.service':
      ensure    => running,
      enable    => true,
      provider  => systemd,
    }
-   service {'xrootd@disk.service':
+   service {'xrootd@dpmdisk.service':
      ensure    => running,
      enable    => true,
      provider  => systemd,
