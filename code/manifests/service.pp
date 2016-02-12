@@ -24,12 +24,6 @@ class xrootd::service (
      enable    => true,
      provider  => systemd,
   }
-  service {'cmsd.service':
-     ensure    => running,
-     enable    => true,
-     provider  => systemd,
-  }
-
  }
   
  else {
