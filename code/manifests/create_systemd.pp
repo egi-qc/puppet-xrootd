@@ -16,7 +16,7 @@ define xrootd::create_systemd (
     ensure  => file,
     owner   => root,
     group   => root,
-    content => "puppet:///modules/xrootd/override.erb",
+    content => template('xrootd/override.erb'),
   } 
 
 }
