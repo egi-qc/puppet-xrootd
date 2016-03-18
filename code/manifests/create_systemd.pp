@@ -7,17 +7,12 @@ define xrootd::create_systemd (
 ) {
   include xrootd::config
 
-  exec {
-    'systemctl-daemon-reload':
-      command => 'systemctl daemon-reload',
-  }
-
-  file {"/etc/systemd/system/$filename.service.d/":
+  file {"/etc/systemd/system/${filename}.service.d/":
     ensure => directory,
     owner   => root,
     group   => root,
   } ->
-  file {"/etc/systemd/system/$filename.service.d/override.conf":
+  file {"/etc/systemd/system/${filename}.service.d/override.conf":
     ensure  => file,
     owner   => root,
     group   => root,
