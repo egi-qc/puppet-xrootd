@@ -1,0 +1,14 @@
+[Service]
+User= <%= @xrootd_user %>
+Group= <%= @xrootd_group %>
+
+<% if @exports -%>
+<% @exports.sort.map do |key,val| -%>
+<%= key %>=<%= val %>
+<% end -%>
+<% end -%>
+
+<% if @daemon_corefile_limit -%>
+DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
+<% end -%>
+
