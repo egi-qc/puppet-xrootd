@@ -25,7 +25,7 @@ class xrootd::service (
      provider  => systemd,
    }
    if $cmsd_instances != undef {
-	service {${cmsd_instances}:
+	service {$cmsd_instances:
     	 ensure    => running,
     	 enable    => true,
 	 provider  => systemd,
