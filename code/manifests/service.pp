@@ -19,13 +19,13 @@ class xrootd::service (
    if $xrootd_instances == undef {
 	fail("xrootd_instances parameter  should  not be empty")
    }
-   service {"xrootd@${xrootd_instances}.service":
+   service {$xrootd_instances:
      ensure    => running,
      enable    => true,
      provider  => systemd,
    }
    if $cmsd_instances != undef {
-	service {"cmsd@${cmsd_instances}.service":
+	service {${cmsd_instances}:
     	 ensure    => running,
     	 enable    => true,
 	 provider  => systemd,
