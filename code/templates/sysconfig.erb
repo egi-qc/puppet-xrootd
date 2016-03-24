@@ -77,5 +77,6 @@ DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
 <% end -%>
 
 <% if @enable_hdfs -%>
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<%= @java_home %>/jre/lib/amd64/server/
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<%= @java_home %>/jre/lib/amd64/server/
+export LD_LIBRARY_PATH
 <% end -%>
