@@ -15,7 +15,7 @@ class xrootd::service (
     $files = File[$sysconfigfile, $configfile]
   }
 
-  if $certificate != undef and $certificate_key != undef {
+  if $certificates != undef  {
     file{$certificates:
 	 ensure    => present
     }
