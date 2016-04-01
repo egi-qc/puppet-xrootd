@@ -16,7 +16,7 @@ class xrootd::service (
   }
 
   if $certificates != undef {
-    $certificates_files = File[$certificates]
+    $certificates_files = File["$certificates"]
   }
  
  if $::operatingsystemmajrelease and $::operatingsystemmajrelease >= 7 { 
@@ -45,13 +45,13 @@ class xrootd::service (
   service {'xrootd':
     ensure    => running,
     enable    => true,
-    subscribe => File[$certificates],
+    subscribe =>  $certificates_files ,
   }
 
   service {'cmsd':
     ensure    => running,
     enable    => true,
-    subscribe => File[$certificates],
+    subscribe =>  $certificates_files,
    }
  }
 }
