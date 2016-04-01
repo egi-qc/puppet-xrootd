@@ -20,6 +20,7 @@ class xrootd::config (
   exec {
     'systemctl-daemon-reload':
       command => '/usr/bin/systemctl daemon-reload',
+      refreshonly => true,
   }
 
   if $::architecture == "x86_64" {
