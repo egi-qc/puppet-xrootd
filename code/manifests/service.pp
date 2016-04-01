@@ -45,13 +45,13 @@ class xrootd::service (
   service {'xrootd':
     ensure    => running,
     enable    => true,
-    subscribe => $certificates_files,
+    subscribe => File[$certificates],
   }
 
   service {'cmsd':
     ensure    => running,
     enable    => true,
-    subscribe => $certificates_files,
+    subscribe => File[$certificates],
    }
  }
 }
