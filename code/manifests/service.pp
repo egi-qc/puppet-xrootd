@@ -14,6 +14,10 @@ class xrootd::service (
   } else {
     $files = File[$sysconfigfile, $configfile]
   }
+
+  if $certificates != undef {
+    $certificates_files = File[$certificates]
+  }
  
  if $::operatingsystemmajrelease and $::operatingsystemmajrelease >= 7 { 
 
@@ -24,14 +28,14 @@ class xrootd::service (
      ensure    => running,
      enable    => true,
      provider  => systemd,
-     subscribe => File[$certificates],
+     subscribe => $certificates_files,
    }
    if $cmsd_instances != undef {
 	service {$cmsd_instances:
     	 ensure    => running,
     	 enable    => true,
 	 provider  => systemd,
-	 subscribe => File[$certificates],
+	 subscribe => $certificates_files,
    	}
    }
  }
@@ -41,13 +45,13 @@ class xrootd::service (
   service {'xrootd':
     ensure    => running,
     enable    => true,
-    subscribe => File[$certificates],
+    subscribe => $certificates_files,
   }
 
   service {'cmsd':
     ensure    => running,
     enable    => true,
-    subscribe => File[$certificates],
+    subscribe => $certificates_files,
    }
  }
 }
