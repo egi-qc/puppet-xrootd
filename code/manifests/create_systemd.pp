@@ -17,6 +17,6 @@ define xrootd::create_systemd (
     owner   => root,
     group   => root,
     content => template('xrootd/override.erb'),
-  }  ~>m Exec['systemctl-daemon-reload']
+  }  ~> Exec['systemctl-daemon-reload']
 
 }
