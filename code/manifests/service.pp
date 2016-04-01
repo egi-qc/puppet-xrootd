@@ -4,6 +4,7 @@ class xrootd::service (
     $authfile = undef,
     $xrootd_instances = undef,
     $cmsd_instances = undef,
+    $certificates = $xrootd::params::certificates,
 ) inherits xrootd::params {
 
   Class[xrootd::config] -> Class[xrootd::service]
@@ -23,12 +24,14 @@ class xrootd::service (
      ensure    => running,
      enable    => true,
      provider  => systemd,
+     subscribe => File[$certificates],
    }
    if $cmsd_instances != undef {
 	service {$cmsd_instances:
     	 ensure    => running,
     	 enable    => true,
 	 provider  => systemd,
+	 subscribe => File[$certificates],
    	}
    }
  }
@@ -38,13 +41,13 @@ class xrootd::service (
   service {'xrootd':
     ensure    => running,
     enable    => true,
-    #subscribe => [$files],
+    subscribe => File[$certificates],
   }
 
   service {'cmsd':
     ensure    => running,
     enable    => true,
-    #subscribe => [$files],
+    subscribe => File[$certificates],
    }
  }
 }
