@@ -16,6 +16,11 @@ class xrootd::config (
     command => "fetch-crl",
     unless  => "ls /etc/grid-security/certificates/*.r0"
   }
+ 
+  exec {
+    'systemctl-daemon-reload':
+      command => 'systemctl daemon-reload',
+  }
 
   if $::architecture == "x86_64" {
     $xrdlibdir = "lib64"

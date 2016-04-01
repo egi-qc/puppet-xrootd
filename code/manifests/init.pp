@@ -22,11 +22,6 @@
 class xrootd (
 ) inherits xrootd::params {
   
-  exec {
-    'systemctl-daemon-reload':
-      command => 'systemctl daemon-reload',
-  }
-
   Class[xrootd::install] -> Class[xrootd::config] -> Class[xrootd::service]
 
   class{"xrootd::install":}
