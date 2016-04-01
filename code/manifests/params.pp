@@ -66,10 +66,9 @@ class xrootd::params {
     $ofs_cmslib = undef
     $ofs_forward = undef
     $ofs_tpc = undef
-
     $pss_origin = undef
     $pss_setopt = undef
     $oss_statlib = undef
     $oss_localroot = undef
-
+    $certificates = ['/etc/grid-security/hostkey.pem','/etc/grid-security/hostcert.pem']
 }
