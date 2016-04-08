@@ -16,8 +16,10 @@ class xrootd::service (
   }
 
   if $certificates != undef  {
-    file{$certificates:
-	 ensure    => present
+    if ! defined(File[$certificates] {
+	    file{$certificates:
+		 ensure    => present
+	    }
     }
     $certificates_files = File[$certificates]
   }
