@@ -18,6 +18,8 @@ class xrootd::params {
     $configfile_template = "xrootd/xrootd.cfg.erb"
     $authfile = "/etc/xrootd/auth_file"
     $authfile_template = "xrootd/authfile_generic.erb"
+    $digauthfile = "/etc/xrootd/digauth.cfg"
+    $digauthfile_template = "xrootd/digauthfile.erb"
     $configdir = "/etc/xrootd"
     $logdir = "/var/log/xrootd"
     $spooldir = "/var/spool/xrootd"
