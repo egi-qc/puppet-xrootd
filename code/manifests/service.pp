@@ -64,7 +64,7 @@ class xrootd::service (
     ensure    => running,
     enable    => true,
     subscribe =>  $certificates_files,
-    require   => Service[$xrootd_instances],
+    require   => Service['xrootd'],
    }
  }
 }
