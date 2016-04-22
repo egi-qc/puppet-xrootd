@@ -6,6 +6,7 @@ class xrootd::config (
   $configdir = $xrootd::params::configdir,
   $logdir = $xrootd::params::logdir,
   $spooldir = $xrootd::params::spooldir,
+  $all_pidpath = $xrootd::params::all_pidpath,
 
 ) inherits xrootd::params {
 
@@ -40,9 +41,16 @@ class xrootd::config (
     owner  => $xrootd_user,
     group  => $xrootd_group
   }
+
   file {$spooldir:
    ensure => directory,
    owner  => $xrootd_user,
    group  => $xrootd_group
- }
+  }
+
+  file {$all_pidpath:
+   ensure => directory,
+   owner  => $xrootd_user,
+   group  => $xrootd_group
+  }
 }
