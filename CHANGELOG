@@ -1,3 +1,6 @@
+2016-05-31 Frederic Schaer  <frederic.schaer@cea.fr>
+        * completed support for CentOS7
+        * xrootd service restarted if certificate updated
 2016-01-18 Frederic Schaer  <frederic.schaer@cea.fr>
     	* Puppet 4 support
 2015-12-10 Andrea Manzi <andrea.manzi@cern.ch>
