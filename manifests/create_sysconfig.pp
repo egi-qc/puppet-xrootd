@@ -12,11 +12,13 @@ define xrootd::create_sysconfig (
 
   $exports = $xrootd::config::exports,
 
-  $daemon_corefile_limit = $xrootd::config::daemon_corefile_limit
+  $daemon_corefile_limit = $xrootd::config::daemon_corefile_limit,
+  $enable_hdfs = false,
+  $java_home = undef,
 ) {
   include xrootd::config
 
-  file {"$filename":
+  file {$filename:
     ensure  => file,
     owner   => $xrootd_user,
     group   => $xrootd_group,
