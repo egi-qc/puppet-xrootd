@@ -5,7 +5,7 @@ class xrootd::service (
     $xrootd_instances = undef,
     $cmsd_instances = undef,
     $certificate = $xrootd::params::certificate,
-    $key	= $xrootd::params::key
+    $key	= $xrootd::params::key,
 ) inherits xrootd::params {
 
   Class[xrootd::config] -> Class[xrootd::service]
@@ -16,20 +16,8 @@ class xrootd::service (
     $files = File[$sysconfigfile, $configfile]
   }
 
-  if $certificate != undef and $key != undef  {
-    if ! defined(File[$certificate]) {
-	    file{$certificate:
-		 ensure    => present
-	    }
-    }
-    if ! defined(File[$key]) {
-	    file{$key:
-                 ensure    => present
-            }
-    }
-    $certificates_files = File[$certificate, $key]
-  }
- 
+  $certificates_files = File[$certificate,$key]
+
  if $::operatingsystemmajrelease and ($::operatingsystemmajrelease + 0) >= 7 { 
 
    if $xrootd_instances == undef {

@@ -72,6 +72,6 @@ class xrootd::params {
     $pss_setopt = undef
     $oss_statlib = undef
     $oss_localroot = undef
-    $certificate= '/etc/grid-security/hostcert.pem'
+    $certificate = '/etc/grid-security/hostcert.pem'
     $key = '/etc/grid-security/hostkey.pem'
 }
