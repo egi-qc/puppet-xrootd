@@ -2,7 +2,7 @@ class xrootd::service (
     $sysconfigfile = $xrootd::params::sysconfigfile,
     $configfile = $xrootd::params::configfile,
     $authfile = undef,
-    $xrootd_instances = undef,
+    $xrootd_instances = "default",
     $cmsd_instances = undef,
     $certificate = $xrootd::params::certificate,
     $key	= $xrootd::params::key,
