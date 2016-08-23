@@ -1,4 +1,6 @@
-2017-07-07 Frederic Schaer  <andrea.manzi@cern.ch>
+2017-08-23 Andrea Manzi  <andrea.manzi@cern.ch>
+        * update fetchcrl dependency
+2017-07-07 Andrea Manzi  <andrea.manzi@cern.ch>
         * change how certs are managed to restart Xrootd services if they change
 2016-05-31 Frederic Schaer  <frederic.schaer@cea.fr>
         * completed support for CentOS7
