@@ -4,14 +4,14 @@ Group= <%= @xrootd_group %>
 
 <% if @exports -%>
 <% @exports.sort.map do |key,val| -%>
-<%= key %>=<%= val %>
+Environment=<%= key %>=<%= val %>
 <% end -%>
 <% end -%>
 
 <% if @daemon_corefile_limit -%>
-DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
+Environment=DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
 <% end -%>
 
 <% if @enable_hdfs -%>
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<%= @java_home %>/jre/lib/amd64/server/
+Environment=LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<%= @java_home %>/jre/lib/amd64/server/
 <% end -%>
