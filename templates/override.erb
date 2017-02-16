@@ -8,6 +8,7 @@ Environment=<%= key %>=<%= val %>
 <% end -%>
 <% end -%>
 
+LimitCORE=infinity
 <% if @daemon_corefile_limit -%>
 Environment=DAEMON_COREFILE_LIMIT=<%= @daemon_corefile_limit %>
 <% end -%>
