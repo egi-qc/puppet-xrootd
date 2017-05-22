@@ -14,7 +14,7 @@ class xrootd::config (
 
   exec {"run-fetchcrl-atleastonce":
     path    => "/bin:/usr/bin:/sbin:/usr/sbin",
-    command => "fetch-crl",
+    command => "/usr/sbin/fetch-crl",
     unless  => "ls /etc/grid-security/certificates/*.r0"
   }
  
