@@ -19,5 +19,5 @@
   "source": "https://github.com/cern-it-sdc-id/puppet-xrootd",
   "summary": "This module installs and configure a xrootd server",
   "tags": [],
-  "version": "0.2.3"
+  "version": "0.2.4"
 }
