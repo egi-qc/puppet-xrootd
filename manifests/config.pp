@@ -19,7 +19,7 @@ class xrootd::config (
   }
  
   exec {
-    'systemctl-daemon-reload':
+    'systemctl-daemon-reload-xrootd':
       command => '/usr/bin/systemctl daemon-reload',
       refreshonly => true,
   }
