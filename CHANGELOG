@@ -1,3 +1,5 @@
+2018-01-18 Andrea Manzi  <andrea.manzi@cern.ch>
+        * rename exec systemctl-daemon-reload to avoid clashes
 2017-08-17 Andrea Manzi  <andrea.manzi@cern.ch>
         * fix dependency cycle on C7
 2016-08-23 Andrea Manzi  <andrea.manzi@cern.ch>
