@@ -3,6 +3,8 @@ class xrootd::params {
     $xrootd_user = "xrootd"
     $xrootd_group = "xrootd"
 
+    $xrootd::params::xrootd_instances = hiera("xrootd::params::xrootd_instances")
+
     $xrootd_instances_options = [ {"default" => "-l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo"} ] #Unlike the other *_instances_options, this xrootd_instances_options is an array of hashes.
     $cmsd_instances_options = undef # { "default" => "-l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" } #This is a hash
     $purd_instances_options = undef # { "default" => "-l /var/log/xrootd/purd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo" } #This is a hash
